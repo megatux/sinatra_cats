@@ -3,6 +3,7 @@ require 'sinatra/base'
 require "haml" 
 
 class App < Sinatra::Base
+  set :public_folder, 'public'
 
   BREEDS = [
     {name: 'Abisinio', image: 'http://upload.wikimedia.org/wikipedia/commons/0/0a/Kamee01.jpg'},
