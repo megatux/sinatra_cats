@@ -1,0 +1,5 @@
+%h1 Razas de gatos
+
+%ul
+  - @cats.each do |breed|
+    %li= breed[:name]
