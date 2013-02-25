@@ -25,4 +25,9 @@ class App < Sinatra::Base
     @cats = BREEDS
     haml :index, layout: true
   end
+
+  get '/raza/:id' do |id|
+    @cat = BREEDS[id.to_i]
+    haml :show, layout: true
+  end
 end

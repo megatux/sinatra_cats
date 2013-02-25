@@ -1,5 +1,6 @@
 %h1 Razas de gatos
 
 %ul
-  - @cats.each do |breed|
-    %li= breed[:name]
+  - @cats.each_with_index do |breed, index|
+    %li
+      %a{href: "raza/#{index}"}= breed[:name]
